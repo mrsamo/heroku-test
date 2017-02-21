@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API</title>
+    <script src="/static.main.js"></script>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+
+<div class="b-table">
+    {{#body}}
+        <div class="b-table__row">
+            <div class="b-table__head">{{value}}</div>
+            <div class="b-table__content">
+                <div class="b-table__title">{{title}}</div>
+                <div class="b-table__details">{{details}}</div>
+                <div class="b-table__values">{{add_values}}</div>
+            </div>
+        </div>
+    {{/body}}
+    <div class="b-table__row">
+        <div class="b-pagination">
+            {{#pages}}
+                <a href="/{{page}}"
+                   class="b-pagination__link{{#active}} b-pagination__link_active_yes{{/active}}">{{page}}</a>
+            {{/pages}}
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
